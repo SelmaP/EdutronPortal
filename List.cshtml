@@ -1,0 +1,40 @@
+﻿@model IEnumerable<EdutronPortal.Models.EgitimTanim>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <title>List</title>
+</head>
+<body class="text-center">
+    <h3 class="text-center">Eğitim Listesi</h3>
+    <table class="table table-responsive table-striped table-bordered table-sm">
+        <thead>
+            <tr>
+                <th>Kategori</th>
+                <th>Eğitmen Bilgileri</th>
+                <th>Kontenjan Sayisi</th>
+                <th>Maliyet</th>
+                <th>Süre Bilgisi</th>
+            </tr>
+        </thead>
+       <tbody>
+           @foreach (var egitim in Model)
+           {
+           <tr>
+               <td>@egitim.Kategori</td>
+               <td>@egitim.EgitmenBilgisi</td>
+               <td>@egitim.KontenjanSayisi</td>
+               <td>@egitim.Maliyet</td>
+               <td>@egitim.SureBilgileri</td>
+           </tr>
+           }
+       </tbody>
+    </table>
+</body>
+</html>
